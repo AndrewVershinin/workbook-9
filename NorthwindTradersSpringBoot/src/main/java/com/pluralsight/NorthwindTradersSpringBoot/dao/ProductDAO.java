@@ -1,15 +1,12 @@
 package com.pluralsight.NorthwindTradersSpringBoot.dao;
 
-import com.pluralsight.NorthwindTradersSpringBoot.model.Customer;
-
+import com.pluralsight.NorthwindTradersSpringBoot.model.Product;
 import java.util.List;
 
 public interface ProductDAO {
-    public List<Customer> getAll();
-    public List<Customer> getByCompanyName();
-    public List<Customer> getByContactName();
-    public List<Customer> getByAddress();
-    public Customer getByCustomerID();
-    public void delete();
-    public void add(Customer customer);
+    List<Product> getAll();
+    Product getById(int id);
+    List<Product> getByName(String name);
+    List<Product> getByCategoryId(int categoryId);
+    List<Product> getByPrice(double price);
 }
